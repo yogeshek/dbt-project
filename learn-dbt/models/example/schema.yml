@@ -1,0 +1,43 @@
+
+version: 2
+
+models:
+  - name: my_first_dbt_model
+    description: "A starter dbt model"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+
+  - name: my_second_dbt_model
+    description: "A starter dbt model"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+  - name: playing_with_tests
+    description: "play"
+    columns:
+      - name: c_custkey
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+    columns:
+      - name: c_mktsegment
+        description: "The primary key for this table"
+        tests:
+          - accepted_values:
+              values: ['BUILDING', 'AUTOMOBILE', 'MACHINERY', 'HOUSEHOLD', 'FURNITURE']
+
+
+
+  - name: newdate
+  - name: ephemeraltestsource
+  - name: ephemeraltesttarget1
+  - name: ephemeraltesttarget2
+  - name: playing_with_tests2

@@ -1,0 +1,53 @@
+{{
+    config(
+        materialized='ephemeral'
+    )
+}}
+with int_more_two_orders as (
+    select
+        orders.order_id,
+        orders.order_date
+    from {{ ref('stg_orders') }} as orders
+        inner join {{ ref('stg_order_details') }} as order_details
+        on orders.order_id = order_details.order_id
+    group by
+        orders.order_id,
+        orders.order_date
+    having count(*) > 2
+)
+select *
+from int_more_two_orders
+
+
+
+
+
+
+
+{{
+    config(
+        materialized='table'
+    )
+}}
+with more_two_orders_avg_discount as (
+    select
+        more_two_orders.order_id,
+        more_two_orders.order_date,
+        avg(order_details.discount) as avg_order_discount
+    from {{ ref('int_more_two_orders') }} as more_two_orders
+        inner join {{ ref('stg_order_details') }} as order_details
+        on more_two_orders.order_id = order_details.order_id
+    group by
+        more_two_orders.order_id,
+        more_two_orders.order_date
+),
+more_two_orders_yearly_avg_discount as (
+    select
+        extract(year from order_date) as year,
+        avg(avg_order_discount) * 100 as yearly_discount_average
+    from more_two_orders_avg_discount
+    group by
+        extract(year from order_date)
+)
+select *
+from more_two_orders_yearly_avg_discount

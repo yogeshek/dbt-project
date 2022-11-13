@@ -1,0 +1,20 @@
+
+version: 2
+
+models:
+  
+  - name: rwt_report_view
+    description: "A starter dbt model"
+    columns:
+      - name: COUNTS
+        description: "The primary key for this table"
+        tests:
+          - not_null
+          - accepted_values:
+              values: [0]
+
+      - name: "`RWT_MSID`"
+        description: "Testing String"
+        tests:
+          - accepted_values:
+              values: ['B']

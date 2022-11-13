@@ -1,0 +1,7 @@
+{{config(materialized='ephemeral', alias='fim')}}
+
+with source_data as(
+  select * from DBT_TEST.DBT_SCHEMA.CUSTOMER
+)
+
+select * from source_data 

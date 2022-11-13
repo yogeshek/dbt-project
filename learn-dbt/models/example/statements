@@ -1,0 +1,4 @@
+{{ config(materialized='table') }}
+
+select company,line_item_name from QUARTERLY_RESULTS
+ where line_item_value>=10000
