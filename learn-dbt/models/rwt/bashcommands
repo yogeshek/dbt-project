@@ -1,0 +1,265 @@
+yoges@Yogesh MINGW64 /d/git/dbt-project/learn-dbt (main)
+$ atom .
+
+
+yoges@Yogesh MINGW64 /d/git/dbt-project/learn-dbt (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   dbt_project.yml
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+yoges@Yogesh MINGW64 /d/git/dbt-project/learn-dbt (main)
+$ git commit -m "tutorial-lessons"
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   dbt_project.yml
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+yoges@Yogesh MINGW64 /d/git/dbt-project/learn-dbt (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   dbt_project.yml
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+yoges@Yogesh MINGW64 /d/git/dbt-project/learn-dbt (main)
+$ git add .
+warning: in the working copy of 'learn-dbt/dbt_project.yml', LF will be replaced by CRLF the next time Git touches it
+
+yoges@Yogesh MINGW64 /d/git/dbt-project/learn-dbt (main)
+$ git commit -m "tutorial-lessons"
+[main bd98c28] tutorial-lessons
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+yoges@Yogesh MINGW64 /d/git/dbt-project/learn-dbt (main)
+$ git stauts
+git: 'stauts' is not a git command. See 'git --help'.
+
+The most similar command is
+        status
+
+yoges@Yogesh MINGW64 /d/git/dbt-project/learn-dbt (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+yoges@Yogesh MINGW64 /d/git/dbt-project/learn-dbt (main)
+$ git push origin
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 344 bytes | 344.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/yogeshek/dbt-project.git
+   5d013f5..bd98c28  main -> main
+
+yoges@Yogesh MINGW64 /d/git/dbt-project/learn-dbt (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+yoges@Yogesh MINGW64 /d/git/dbt-project/learn-dbt (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   dbt_project.yml
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+yoges@Yogesh MINGW64 /d/git/dbt-project/learn-dbt (main)
+$ git add .
+warning: in the working copy of 'learn-dbt/dbt_project.yml', LF will be replaced by CRLF the next time Git touches it
+
+yoges@Yogesh MINGW64 /d/git/dbt-project/learn-dbt (main)
+$ git commit -m "tutorial-lessons"
+[main d44a629] tutorial-lessons
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+yoges@Yogesh MINGW64 /d/git/dbt-project/learn-dbt (main)
+$ git push origin
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 346 bytes | 346.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/yogeshek/dbt-project.git
+   bd98c28..d44a629  main -> main
+
+yoges@Yogesh MINGW64 /d/git/dbt-project/learn-dbt (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+yoges@Yogesh MINGW64 /d/git/dbt-project/learn-dbt (main)
+$ run 'dbt --no-version-check deps'
+bash: run: command not found
+
+yoges@Yogesh MINGW64 /d/git/dbt-project/learn-dbt (main)
+$ dbt --no-version-check deps
+usage: dbt [-h] [--version] [-r RECORD_TIMING_INFO] [-d]
+           [--log-format {text,json,default}] [--no-write-json]
+           [--use-colors | --no-use-colors] [-S] [--warn-error]
+           [--partial-parse | --no-partial-parse] [--use-experimental-parser]
+           {docs,source,init,clean,debug,deps,list,ls,build,snapshot,rpc,run,compile,parse,test,seed,run-operation}
+           ...
+dbt: error: unrecognized arguments: --no-version-check
+
+yoges@Yogesh MINGW64 /d/git/dbt-project/learn-dbt (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   dbt_project.yml
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+yoges@Yogesh MINGW64 /d/git/dbt-project/learn-dbt (main)
+$ git add .
+warning: in the working copy of 'learn-dbt/dbt_project.yml', LF will be replaced by CRLF the next time Git touches it
+
+yoges@Yogesh MINGW64 /d/git/dbt-project/learn-dbt (main)
+$ git commit -m "tutorial-lessons"
+[main b4dd5ac] tutorial-lessons
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+yoges@Yogesh MINGW64 /d/git/dbt-project/learn-dbt (main)
+$ git push origin
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 356 bytes | 356.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/yogeshek/dbt-project.git
+   d44a629..b4dd5ac  main -> main
+
+yoges@Yogesh MINGW64 /d/git/dbt-project/learn-dbt (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+yoges@Yogesh MINGW64 /d/git/dbt-project/learn-dbt (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   dbt_project.yml
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+yoges@Yogesh MINGW64 /d/git/dbt-project/learn-dbt (main)
+$ git add .
+warning: in the working copy of 'learn-dbt/dbt_project.yml', LF will be replaced by CRLF the next time Git touches it
+
+yoges@Yogesh MINGW64 /d/git/dbt-project/learn-dbt (main)
+$ git commit -m "tutorial-lessons"
+[main d80cff8] tutorial-lessons
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+yoges@Yogesh MINGW64 /d/git/dbt-project/learn-dbt (main)
+$ git push origin
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 355 bytes | 355.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/yogeshek/dbt-project.git
+   b4dd5ac..d80cff8  main -> main
+
+yoges@Yogesh MINGW64 /d/git/dbt-project/learn-dbt (main)
+$ git stauts
+git: 'stauts' is not a git command. See 'git --help'.
+
+The most similar command is
+        status
+
+yoges@Yogesh MINGW64 /d/git/dbt-project/learn-dbt (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+yoges@Yogesh MINGW64 /d/git/dbt-project/learn-dbt (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   packages.yml
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+yoges@Yogesh MINGW64 /d/git/dbt-project/learn-dbt (main)
+$ git add .
+
+yoges@Yogesh MINGW64 /d/git/dbt-project/learn-dbt (main)
+$ git commit -m "tutorial-lessons"
+[main 6d160e9] tutorial-lessons
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+yoges@Yogesh MINGW64 /d/git/dbt-project/learn-dbt (main)
+$ git push origin
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 337 bytes | 337.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/yogeshek/dbt-project.git
+   d80cff8..6d160e9  main -> main
+
+yoges@Yogesh MINGW64 /d/git/dbt-project/learn-dbt (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+yoges@Yogesh MINGW64 /d/git/dbt-project/learn-dbt (main)
+$
