@@ -3,7 +3,7 @@ git status
 git add .
 git commit -m "mysecondbranch"
 git branch
-git push origin my secondbranch
+git push origin mysecondbranch
 
 
 
