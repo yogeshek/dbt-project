@@ -1,0 +1,12 @@
+git checkout -b mysecondbranch
+git status
+git add .
+git commit -m "mysecondbranch"
+git branch
+git push origin my secondbranch
+
+
+
+git checkout main
+git pull origin
+git branch -d mysecondbranch
