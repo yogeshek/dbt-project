@@ -2,7 +2,7 @@
 {{config(materialized='view')}}
 
 SELECT `RWT_MSID`,`RWT_SNO`,`RWT_MEASURE`,`RWT_FIELD`,
-(select count(*) from RWT.RWT_REPORT.AUDIT_LOG
+(select count(*) from {{ source('sample', 'audit_log')}}
  where CONVERT_TIMEZONE('US/Pacific', 'GMT',
    `Transaction_Date_And_Time`::timestamp_ntz) between {{ var('start_date') }} and {{ var('end_date') }}
     and `entity_name` ='EXPORT'

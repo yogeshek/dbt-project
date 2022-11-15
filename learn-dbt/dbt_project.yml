@@ -47,3 +47,10 @@ models:
     rwt:
       +materialized: view
     pre-hook: "insert into audit (model, state, time) values ('{{this.name}}', 'starting model', current_timestamp)"
+
+sources:
+  - name: sample
+      database: rwt
+      schema: rwt_report
+      tables:
+        -name: audit_log
